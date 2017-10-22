@@ -1,10 +1,10 @@
-import Hello from '@/components/Hello'
+import Home from '@/pages/home'
 
 const routes = [
   {
     path: '/',
-    name: 'Hello',
-    component: Hello
+    name: 'Home',
+    component: Home
   }
 ]
 export default routes;
