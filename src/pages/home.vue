@@ -2,16 +2,16 @@
 	<section>
 		<header class="full-header">
 			<div class="header-title">
-				<img src="../assets/img/header_logo.png" alt="">
+				<img src="../assets/img/header_logo.png">
 			</div>
 			<div class="header-button" @click="scrollDown">
-				<img src="../assets/img/arrow_down_yue.png" alt="">
+				<img src="../assets/img/arrow_down_yue.png">
 			</div>
 		</header>
 		<main>
 			<div class="flex">
 				<div class="flex-item about">
-					<img src="../assets/img/home/about_bg.png" alt="">
+					<img src="../assets/img/home/about_bg.png">
 					<div class="item-content">
 						<div class="item-title">
 							<img src="../assets/img/home/home_about.png">
@@ -46,10 +46,10 @@
 					</div>
 				</div>
 				<div class="flex-item marketing">
-					<img src="../assets/img/home/home_marketing_bg.png" alt="">
+					<img src="../assets/img/home/home_marketing_bg.png">
 					<div class="item-content">
 						<div class="item-title">
-							<img src="../assets/img/home/home_marketing.png" alt="">
+							<img src="../assets/img/home/home_marketing.png">
 						</div>
 						<router-link to="/detail/marketing" class="item-link">
 							<img src="../assets/img/home/show_button.png">
@@ -62,7 +62,7 @@
 					<img src="../assets/img/home/home_finance_bg.png">
 					<div class="item-content">
 						<div class="item-title">
-							<img src="../assets/img/home/home_finance_title.png" alt="">
+							<img src="../assets/img/home/home_finance_title.png">
 						</div>
 						<router-link to="/detail/finance" class="item-link">
 							<img src="../assets/img/home/show_button.png">
@@ -73,7 +73,7 @@
 					<img src="../assets/img/home/home_system_bg.png">
 					<div class="item-content">
 						<div class="item-title">
-							<img src="../assets/img/home/home_system.png" alt="">
+							<img src="../assets/img/home/home_system.png">
 						</div>
 						<router-link to="/detail/system" class="item-link">
 							<img src="../assets/img/home/show_button2.png">
@@ -81,7 +81,7 @@
 					</div>
 				</div>
 				<div class="flex-item join">
-					<img src="../assets/img/home/home_join_bg.png" alt="">
+					<img src="../assets/img/home/home_join_bg.png">
 					<div class="item-content">
 						<div class="item-title join">
 							<img src="../assets/img/home/home_join_title.png">
@@ -94,11 +94,11 @@
 			</div>
 			<div class="flex">
 				<div class="flex-item film">
-					<video poster="http://img14.360buyimg.com/shaidan/s645x515_jfs/t11830/122/255851217/99035/296021db/59eb164eN4722184d.jpg" controls id="yueVideo" @play="handlePlay" @pause="handlePause">
+					<video poster="http://img14.360buyimg.com/shaidan/s645x515_jfs/t11830/122/255851217/99035/296021db/59eb164eN4722184d.jpg" controls id="yueVideo" class="yue-video" @play="handlePlay" @pause="handlePause">
 						<source src="http://1254456297.vod2.myqcloud.com/2f3b5ff4vodtransgzp1254456297/fb24bb029031868223371331575/v.f30.mp4" type="video/mp4">
 					</video>
-					<div class="item-content">
-						<img v-show="!isPlayed" src="../assets/img/home/start_button.png" class="play-button" @click.stop="handlePlayed">
+					<div class="item-content" @click="handlePaused">
+						<img v-show="!isPlayed" src="../assets/img/home/play_button.png" class="play-button" @click.stop="handlePlayed">
 					</div>
 				</div>
 			</div>
@@ -141,11 +141,12 @@
 				this.isPlayed = true;
 				let yueVideo = document.getElementById('yueVideo');
 	    	yueVideo && yueVideo.play()
-	    	return false;
+			},
+			handlePaused() {
+				document.getElementById('yueVideo').pause();
 			},
 			handlePause() {
 				this.isPlayed = false;
-				// document.getElementById('yueVideo').pause()
 			},
 			handlePlay() {
 				this.isPlayed = true;
@@ -157,12 +158,25 @@
 	.full-header {
 	  position: relative;
 	  height: 100vh;
+	  overflow: hidden;
 	  background: url(../assets/img/header_banner.jpg) no-repeat center;
 	  background-size: cover;
-	  overflow: hidden;
+	  @media (min-width: 768px) {
+			background: url(../assets/img/header_bg.jpg) no-repeat center;
+	  	background-size: cover;
+		} 
 	  .header-title {
-	  	width: 90%;
-	  	margin: 10% auto;
+	  	position: absolute;
+	  	top: 5%;
+	  	width: 84%;
+	  	margin-left: 8%;
+	  	text-align: center;
+	  	@media (min-width: 768px) {
+	  		width: 80%;
+	  		margin-left: 10%;
+	  		top: 50%;
+	  		transform: translateY(-50%);
+			} 
 	  }
 	  .header-button {
 	    position: absolute;
@@ -170,7 +184,12 @@
 	    bottom: 5%;
 	    width: 30px;
 	    margin-left: -15px;
+	    cursor: pointer;
 	    animation: flicker .4s ease-in-out infinite alternate;
+	    @media (min-width: 768px) {
+	    	width: 45px;
+	    	margin-left: -22.5px;
+	    }
 	  }
 	}
 	@keyframes flicker {
@@ -183,12 +202,6 @@
 	    opacity: 1 
 	  }
 	}
-	.flex-item {
-		> img {
-			width: 100%;
-			height: 100%
-		}
-	}
 	.item-content {
 		position: absolute;
 		top: 0;
@@ -199,21 +212,44 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		// background: url(../assets/img/home/home_video_bg.jpg) no-repeat center;
-		// background-size: cover;
 		.item-title {
 			width: 25%;
+			text-align: center;
 		}
 		.item-link {
 			display: block;
 			width: 16%;
+			margin-top: 0;
+			text-align: center;
+			@media (min-width: 768px) {
+				margin-top: 1.5rem;
+			}
+		}
+	}
+	.about {
+		.item-content {
+			.item-title {
+				margin-top: -8%;
+			}
+			.item-link {
+				margin-top: 0.3rem;
+				@media (min-width: 768px) {
+					margin-top: 2rem;
+				}
+			}
 		}
 	}
 	.film {
 		.item-content {
-			height: 80%
+			height: 80%;
+			.play-button {
+				margin-top: 5%;
+				@media (max-width: 768px) {
+					width: 64px;
+				}
+			}
 		}
-		video {
+		.yue-video {
 			width: 100%;
 			height: 100%;
 		}
