@@ -8,7 +8,9 @@ import routes from './router'
 import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
 import '@/assets/css/main.scss'
+import { Lazyload } from 'mint-ui';
 
+Vue.use(Lazyload);
 Vue.use(Router)
 Vue.use(MintUI)
 

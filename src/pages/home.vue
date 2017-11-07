@@ -9,7 +9,31 @@
 			</div>
 		</header>
 		<main>
-			<div class="flex">
+			<div class="flex-row scale">
+				<div class="flex-col">
+					<img src="../assets/img/home/banner1.png">
+				</div>
+			</div>
+			<div class="flex-row scale">
+				<div class="flex-col">
+					<img src="../assets/img/home/banner2.png">
+				</div>
+				<div class="flex-col">
+					<img src="../assets/img/home/banner3.png">
+				</div>
+			</div>
+			<div class="flex-row scale">
+				<div class="flex-col">
+					<img src="../assets/img/home/banner4.png">
+				</div>
+				<div class="flex-col">
+					<img src="../assets/img/home/banner5.png">
+				</div>
+				<div class="flex-col">
+					<img src="../assets/img/home/banner6.png">
+				</div>
+			</div>
+			<!-- <div class="flex">
 				<div class="flex-item about">
 					<img src="../assets/img/home/about_bg.png">
 					<div class="item-content">
@@ -91,9 +115,9 @@
 						</router-link>
 					</div>
 				</div>
-			</div>
-			<div class="flex">
-				<div class="flex-item film">
+			</div> -->
+			<div class="flex-row">
+				<div class="flex-col film">
 					<video poster="http://img14.360buyimg.com/shaidan/s645x515_jfs/t11830/122/255851217/99035/296021db/59eb164eN4722184d.jpg" controls id="yueVideo" class="yue-video" @play="handlePlay" @pause="handlePause">
 						<source src="http://1254456297.vod2.myqcloud.com/2f3b5ff4vodtransgzp1254456297/fb24bb029031868223371331575/v.f30.mp4" type="video/mp4">
 					</video>
@@ -101,9 +125,17 @@
 						<img v-show="!isPlayed" src="../assets/img/home/play_button.png" class="play-button" @click.stop="handlePlayed">
 					</div>
 				</div>
+				<div class="flex-col join">
+					<img src="../assets/img/home/banner7.png">
+				</div>
 			</div>
-			<div class="flex">
-				<div class="flex-item intro">
+			<!-- <div class="flex-row">
+				<div class="flex-col">
+					<img src="../assets/img/home/banner7.png">
+				</div>
+			</div> -->
+			<div class="flex-row">
+				<div class="flex-col intro">
 					<img src="../assets/img/home/home_intro.jpg">
 				</div>
 			</div>
@@ -140,7 +172,11 @@
 			handlePlayed() {
 				this.isPlayed = true;
 				let yueVideo = document.getElementById('yueVideo');
-	    	yueVideo && yueVideo.play()
+				if(yueVideo && yueVideo.readyState) {
+					yueVideo.play()
+				} else {
+					this.$toast('该视频暂无法播放')
+				}
 			},
 			handlePaused() {
 				document.getElementById('yueVideo').pause();
@@ -150,7 +186,10 @@
 			},
 			handlePlay() {
 				this.isPlayed = true;
-			}
+			},
+			handleCanPlay() {
+
+			},
 		}
 	}
 </script>
@@ -159,7 +198,7 @@
 	  position: relative;
 	  height: 100vh;
 	  overflow: hidden;
-	  background: url(../assets/img/header_banner.jpg) no-repeat center;
+	  background: url(../assets/img/header_banner1.jpg) no-repeat center;
 	  background-size: cover;
 	  @media (min-width: 768px) {
 			background: url(../assets/img/header_bg.jpg) no-repeat center;
@@ -167,7 +206,7 @@
 		} 
 	  .header-title {
 	  	position: absolute;
-	  	top: 5%;
+	  	top: 72%;
 	  	width: 84%;
 	  	margin-left: 8%;
 	  	text-align: center;
@@ -201,6 +240,27 @@
 	    transform: translateY(10px); 
 	    opacity: 1 
 	  }
+	}
+	.flex-row {
+		.flex-col {
+			> img {
+	      display: block;
+	      width: 100%;
+	      height: 100%;
+	    }
+		}
+		&.scale {
+			.flex-col {
+				cursor: pointer;
+				overflow: hidden;
+				> img {
+					transition: all .5s;
+					&:hover {
+						transform: scale(1.08);
+					}
+				}
+			}
+		}
 	}
 	.item-content {
 		position: absolute;
@@ -240,8 +300,10 @@
 		}
 	}
 	.film {
+		position: relative;
 		.item-content {
 			height: 80%;
+			// cursor: pointer;
 			.play-button {
 				margin-top: 5%;
 				@media (max-width: 768px) {
@@ -257,16 +319,26 @@
 			cursor: pointer;
 		}
 	}
+	.join {
+		display: none;
+		@media (min-width: 768px) {
+			display: block;
+		}
+	}
 	.footer {
 		padding: 1rem;
 		text-align: center;
 		background: #fff;
 		.footer-logo {
 			display: inline-block;
-			width: 30px;
-			height: 30px;
+			width: 25px;
+			height: 25px;
 			background: url(../assets/img/footer/yue_icon.png) no-repeat center;
 			background-size: cover;
+			@media (min-width: 768px) {
+				width: 30px;
+				height: 30px;
+			}
 		}
 	}
 </style>
