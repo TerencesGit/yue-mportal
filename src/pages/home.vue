@@ -9,144 +9,102 @@
 			</div>
 		</header>
 		<main>
-			<div class="flex-row scale">
-				<div class="flex-col">
+			<div class="flex-row">
+				<div class="flex-col p-show scale">
 					<img src="../assets/img/home/banner1.png">
+					<router-link to="/detail/about">
+						<img src="../assets/img/home/banner_link1.png" class="banner-link about">
+					</router-link>
 				</div>
+				<router-link to="/detail/about" class="flex-col m-show">
+					<img src="../assets/img/home/m_banner1.png">
+				</router-link>
 			</div>
-			<div class="flex-row scale">
-				<div class="flex-col">
+			<div class="flex-row">
+				<div class="flex-col p-show scale">
 					<img src="../assets/img/home/banner2.png">
+					<router-link to="/detail/photography">
+						<img src="../assets/img/home/banner_link2.png" class="banner-link photo">
+					</router-link>
 				</div>
-				<div class="flex-col">
+				<div class="flex-col p-show scale">
 					<img src="../assets/img/home/banner3.png">
-				</div>
-			</div>
-			<div class="flex-row scale">
-				<div class="flex-col">
-					<img src="../assets/img/home/banner4.png">
-				</div>
-				<div class="flex-col">
-					<img src="../assets/img/home/banner5.png">
-				</div>
-				<div class="flex-col">
-					<img src="../assets/img/home/banner6.png">
-				</div>
-			</div>
-			<!-- <div class="flex">
-				<div class="flex-item about">
-					<img src="../assets/img/home/about_bg.png">
-					<div class="item-content">
-						<div class="item-title">
-							<img src="../assets/img/home/home_about.png">
-						</div>
-						<router-link to="/detail/about" class="item-link">
-							<img src="../assets/img/home/about_us.png" >
-						</router-link>
-					</div>
-				</div>
-			</div>
-			<div class="flex">
-				<div class="flex-item photo">
-					<img src="../assets/img/home/home_photo_bg.png">
-					<div class="item-content">
-						<div class="item-title">
-							<img src="../assets/img/home/home_photo.png">
-						</div>
-						<router-link to="/detail/photography" class="item-link">
-							<img src="../assets/img/home/show_button.png">
-						</router-link>
-					</div>
+					<router-link to="/detail/tourism">
+						<img src="../assets/img/home/banner_link3.png" class="banner-link tourism">
+					</router-link>
 				</div> 
-				<div class="flex-item tourism">
-					<img src="../assets/img/home/home_tourism_bg.png">
-					<div class="item-content">
-						<div class="item-title">
-							<img src="../assets/img/home/home_tourism_title.png">
-						</div>
-						<router-link to="/detail/tourism" class="item-link">
-							<img src="../assets/img/home/show_button.png">
-						</router-link>
-					</div>
-				</div>
-				<div class="flex-item marketing">
-					<img src="../assets/img/home/home_marketing_bg.png">
-					<div class="item-content">
-						<div class="item-title">
-							<img src="../assets/img/home/home_marketing.png">
-						</div>
-						<router-link to="/detail/marketing" class="item-link">
-							<img src="../assets/img/home/show_button.png">
-						</router-link>
-					</div>
-				</div>
+				<router-link to="/detail/photography" class="flex-col m-show">
+					<img src="../assets/img/home/m_banner2.png">
+				</router-link>
+				<router-link to="/detail/tourism" class="flex-col m-show">
+					<img src="../assets/img/home/m_banner3.png">
+				</router-link>
+				<router-link to="/detail/finance" class="flex-col m-show">
+					<img src="../assets/img/home/m_banner4.png">
+				</router-link>
 			</div>
-			<div class="flex">
-				<div class="flex-item finance">
-					<img src="../assets/img/home/home_finance_bg.png">
-					<div class="item-content">
-						<div class="item-title">
-							<img src="../assets/img/home/home_finance_title.png">
-						</div>
-						<router-link to="/detail/finance" class="item-link">
-							<img src="../assets/img/home/show_button.png">
-						</router-link>
-					</div>
+			<div class="flex-row">
+				<div class="flex-col p-show scale">
+					<img src="../assets/img/home/banner4.png">
+					<router-link to="/detail/finance">
+						<img src="../assets/img/home/banner_link4.png" class="banner-link">
+					</router-link>
 				</div>
-				<div class="flex-item system">
-					<img src="../assets/img/home/home_system_bg.png">
-					<div class="item-content">
-						<div class="item-title">
-							<img src="../assets/img/home/home_system.png">
-						</div>
-						<router-link to="/detail/system" class="item-link">
-							<img src="../assets/img/home/show_button2.png">
-						</router-link>
-					</div>
+				<div class="flex-col p-show scale">
+					<img src="../assets/img/home/banner5.png">
+					<router-link to="/detail/system">
+						<img src="../assets/img/home/banner_link5.png" class="banner-link">
+					</router-link>
 				</div>
-				<div class="flex-item join">
-					<img src="../assets/img/home/home_join_bg.png">
-					<div class="item-content">
-						<div class="item-title join">
-							<img src="../assets/img/home/home_join_title.png">
-						</div>
-						<router-link to="/detail/join" class="item-link">
-							<img src="../assets/img/home/show_button.png">
-						</router-link>
-					</div>
+				<div class="flex-col p-show scale">
+					<img src="../assets/img/home/banner6.png">
+					<router-link to="/detail/marketing">
+						<img src="../assets/img/home/banner_link6.png" class="banner-link">
+					</router-link>
 				</div>
-			</div> -->
+				<router-link to="/detail/system" class="flex-col m-show">
+					<img src="../assets/img/home/m_banner5.png">
+				</router-link>
+				<router-link to="/detail/marketing" class="flex-col m-show">
+					<img src="../assets/img/home/m_banner6.png">
+				</router-link>
+				<router-link to="/detail/join" class="flex-col m-show">
+					<img src="../assets/img/home/m_banner7.png">
+				</router-link>
+			</div>
 			<div class="flex-row">
 				<div class="flex-col film">
 					<video poster="http://img14.360buyimg.com/shaidan/s645x515_jfs/t11830/122/255851217/99035/296021db/59eb164eN4722184d.jpg" controls id="yueVideo" class="yue-video" @play="handlePlay" @pause="handlePause">
-						<source src="http://1254456297.vod2.myqcloud.com/2f3b5ff4vodtransgzp1254456297/fb24bb029031868223371331575/v.f30.mp4" type="video/mp4">
+						<source src="http://1254456297.vod2.myqcloud.com/2f3b5ff4vodtransgzp1254456297/3388b0459031868223334457147/v.f40.mp4" type="video/mp4">
 					</video>
-					<div class="item-content" @click="handlePaused">
+					<div class="film-view" @click="handlePaused">
 						<img v-show="!isPlayed" src="../assets/img/home/play_button.png" class="play-button" @click.stop="handlePlayed">
 					</div>
 				</div>
-				<div class="flex-col join">
+				<div class="flex-col p-show">
 					<img src="../assets/img/home/banner7.png">
+					<router-link to="/detail/join">
+						<img src="../assets/img/home/banner_link7.png" class="banner-link join">
+					</router-link>
 				</div>
 			</div>
-			<!-- <div class="flex-row">
-				<div class="flex-col">
-					<img src="../assets/img/home/banner7.png">
-				</div>
-			</div> -->
 			<div class="flex-row">
 				<div class="flex-col intro">
-					<img src="../assets/img/home/home_intro.jpg">
+					<img src="../assets/img/home/banner8.jpg">
 				</div>
 			</div>
 		</main>
-		<footer class="footer">
+		<footer class="footer p-show">
 			<span class="footer-logo"></span>
 		</footer>
 	</section>
 </template>
 <script>
+	import FooterComp from '@/components/Footer'
 	export default {
+		components: {
+			FooterComp
+		},
 		data () {
 			return {
 				isPlayed: false,
@@ -243,72 +201,47 @@
 	}
 	.flex-row {
 		.flex-col {
-			> img {
-	      display: block;
-	      width: 100%;
-	      height: 100%;
-	    }
-		}
-		&.scale {
-			.flex-col {
-				cursor: pointer;
-				overflow: hidden;
-				> img {
-					transition: all .5s;
-					&:hover {
-						transform: scale(1.08);
-					}
-				}
-			}
+			position: relative;
+			overflow: hidden;
 		}
 	}
-	.item-content {
+	.banner-link {
 		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		.item-title {
+		top: 50%;
+		left: 50%;
+		width: 36%;
+		transform: translate(-50%, -50%);
+		&.about {
+			top: 40%;
+			width: 14%;
+		}
+		&.photo {
+			top: 45%;
+			left: 66%;
 			width: 25%;
-			text-align: center;
 		}
-		.item-link {
-			display: block;
-			width: 16%;
-			margin-top: 0;
-			text-align: center;
-			@media (min-width: 768px) {
-				margin-top: 1.5rem;
-			}
+		&.tourism {
+			top: 45%;
+			left: 35%;
+			width: 25%;
 		}
-	}
-	.about {
-		.item-content {
-			.item-title {
-				margin-top: -8%;
-			}
-			.item-link {
-				margin-top: 0.3rem;
-				@media (min-width: 768px) {
-					margin-top: 2rem;
-				}
-			}
+		&.join {
+			top: 48%;
+			left: 35%;
+			width: 26%;
 		}
 	}
 	.film {
 		position: relative;
-		.item-content {
+		.film-view {
+			position: absolute;
+			top: 0;
+			width: 100%;
 			height: 80%;
-			// cursor: pointer;
+			text-align: center;
 			.play-button {
-				margin-top: 5%;
-				@media (max-width: 768px) {
-					width: 64px;
-				}
+				width: 64px;
+				margin-top: 20%;
 			}
 		}
 		.yue-video {
@@ -319,14 +252,8 @@
 			cursor: pointer;
 		}
 	}
-	.join {
-		display: none;
-		@media (min-width: 768px) {
-			display: block;
-		}
-	}
 	.footer {
-		padding: 1rem;
+		padding: 15px 0;
 		text-align: center;
 		background: #fff;
 		.footer-logo {
