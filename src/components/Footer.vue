@@ -60,6 +60,7 @@
 </script>
 <style scoped lang="scss">
 	.footer {
+		padding-top: 15px;
 		background: #fff;
 		.flex-row {
 			@media(min-width: 768px) {
