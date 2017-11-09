@@ -2,10 +2,10 @@
 	<section>
 		<header class="full-header">
 			<div class="header-title">
-				<img src="../assets/img/header_logo.png">
+				<img src="../assets/img/header/banner_title.png">
 			</div>
 			<div class="header-button" @click="scrollDown">
-				<img src="../assets/img/arrow_down_yue.png">
+				<img src="../assets/img/header/arrow_down_yue.png">
 			</div>
 		</header>
 		<main>
@@ -100,6 +100,7 @@
 	</section>
 </template>
 <script>
+	import { getMyInfo } from '@/api'
 	import FooterComp from '@/components/Footer'
 	export default {
 		components: {
@@ -127,6 +128,18 @@
 	      }
 	      timer = setInterval(gotoTop, 1)
 			},
+			getUserInfo() {
+	      getMyInfo().then(res => {
+	      	console.log(res)
+	        if(res.data.code === '0001') {
+	        } else {
+	          // this.$message.error(res.data.message)
+	        }
+	      }).catch(err => {
+	        console.log(err)
+	        this.$catchError(err)
+	      })
+	    },
 			handlePlayed() {
 				this.isPlayed = true;
 				let yueVideo = document.getElementById('yueVideo');
@@ -148,6 +161,10 @@
 			handleCanPlay() {
 
 			},
+		},
+		mounted() {
+			window.scrollTo(0, 0)
+			this.getUserInfo()
 		}
 	}
 </script>
@@ -156,10 +173,10 @@
 	  position: relative;
 	  height: 100vh;
 	  overflow: hidden;
-	  background: url(../assets/img/header_banner1.jpg) no-repeat center;
+	  background: url(../assets/img/header/m_banner.jpg) no-repeat center;
 	  background-size: cover;
 	  @media (min-width: 768px) {
-			background: url(../assets/img/header_bg.jpg) no-repeat center;
+			background: url(../assets/img/header/banner.jpg) no-repeat center;
 	  	background-size: cover;
 		} 
 	  .header-title {

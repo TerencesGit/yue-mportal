@@ -2,12 +2,12 @@
 	<div class="full-header">
 		<div class="header-title">
 			<slot name="header-title">
-				<img src="../assets/img/header_logo.png">
+				<img src="../assets/img/header/banner_title.png">
 			</slot>
 		</div>
 		<div class="header-icon" @click="scrollDown">
 			<slot name="scroll-button">
-				<img src="../assets/img/arrow_down_yue.png">
+				<img src="../assets/img/header/arrow_down_yue.png">
 			</slot>
 		</div>
 	</div>
@@ -39,16 +39,15 @@
 	.full-header {
 	  position: relative;
 	  height: 100vh;
-	  background: url(../assets/img/header_banner.jpg) no-repeat center;
+	  background: url(../assets/img/header/m_banner.jpg) no-repeat center;
 	  background-size: cover;
 	  @media (min-width: 768px) {
-	  	background: url(../assets/img/header_bg.jpg) no-repeat center;
+	  	background: url(../assets/img/header/banner.jpg) no-repeat center;
 	  	background-size: cover;
 		}
 	  .header-title {
 	  	position: absolute;
 	  	top: 75%;
-
 	  	transform: translateY(-50%);
 	  	width: 80%;
 	  	margin-left: 10%;

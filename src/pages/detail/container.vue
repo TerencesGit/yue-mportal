@@ -10,7 +10,7 @@
 	</section>
 </template>
 <script>
-	// import { getMyInfo } from '@/api'
+	import { getMyInfo } from '@/api'
 	import AsideComp from '@/components/Aside'
 	import FooterComp from '@/components/Footer'
 	export default {
@@ -33,7 +33,8 @@
 	        if(res.data.code === '0001') {
 	          // let userInfo = res.data.result.userInfo;
 	        } else {
-	          // this.$message.error(res.data.message)
+	          this.$toast(res.data.message)
+	        	this.$router.push('/login')
 	        }
 	      }).catch(err => {
 	        console.log(err)
@@ -43,7 +44,7 @@
 		},
 		mounted () {
 			this.asideShow = false;
-			// this.getUserInfo()
+			this.getUserInfo()
 			document.addEventListener('scroll', this.scroll)
 			// if(document.getElementById('iconDiv1')) return;
 			// let _53code = document.createElement("script");
