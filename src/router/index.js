@@ -20,17 +20,17 @@ const routes = [
     children: [
     	{
     		path: 'login',
-        name: '登录',
+        name: '登录页',
         component: Login,  
     	},
       {
         path: 'register',
-        name: '注册',
+        name: '注册页',
         component: Register,
       },
       {
         path: 'register_success',
-        name: '注册成功',
+        name: '注册成功页',
         component: RegisterSuccess,
       }
     ]
