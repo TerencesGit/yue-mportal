@@ -7,6 +7,9 @@ import DetailContainer from '@/pages/detail/container'
 import Photography from '@/pages/detail/photography'
 import PhotoNative from '@/pages/detail/photo_native'
 import PhotoOversea from '@/pages/detail/photo_oversea'
+import Tourism from '@/pages/detail/tourism'
+import Finance from '@/pages/detail/finance'
+import System from '@/pages/detail/system'
 
 const routes = [
   {
@@ -54,6 +57,21 @@ const routes = [
         path: 'oversea',
         name: '海外旅拍',
         component: PhotoOversea,
+      },
+      {
+        path: 'tourism',
+        name: '旅游服务',
+        component: Tourism,
+      },
+      {
+        path: 'finance',
+        name: '金融服务',
+        component: Finance,
+      },
+      {
+        path: 'system',
+        name: '系统服务',
+        component: System,
       },
     ]
   }

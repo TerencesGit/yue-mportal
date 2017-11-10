@@ -153,13 +153,10 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		height: 100vh;
+		height: auto;
 		padding: 30px;
 		background: url(../../assets/img/login/register_bg.jpg) no-repeat center;
 		background-size: cover;
-		@media (min-width: 768px) {
-		 height: auto;
-		}
 		.login-box {
 			width: 100%;
 			text-align: center;

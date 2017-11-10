@@ -26,7 +26,7 @@
 				<img src="../assets/img/footer/m_nav6.png" class="m-show">
 			</router-link>
 		</div>
-		<div class="footer-logo p-show">
+		<div class="footer-logo">
 			<span @click="backHome"></span>
 		</div>
 	</footer>
@@ -75,14 +75,18 @@
 		}
 		.footer-logo {
 			width: 100%;
-			padding: 10px;
-			text-align: center;
+			padding: 10px 0;
+			@media (min-width: 768px) {
+				padding: 15px 0;
+			}
 			span {
-				display: inline-block;
+				display: block;
 				width: 25px;
 				height: 25px;
+				margin: auto;
 				background: url(../assets/img/footer/yue_icon.png) no-repeat center;
 				background-size: cover;
+				cursor: pointer;
 				@media (min-width: 768px) {
 					width: 30px;
 					height: 30px;

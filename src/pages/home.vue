@@ -175,7 +175,7 @@
 	  overflow: hidden;
 	  background: url(../assets/img/header/m_banner.jpg) no-repeat center;
 	  background-size: cover;
-	  @media (min-width: 768px) {
+	  @media (min-width: 769px) {
 			background: url(../assets/img/header/banner.jpg) no-repeat center;
 	  	background-size: cover;
 		} 

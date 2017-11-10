@@ -45,6 +45,11 @@
 	  	background: url(../assets/img/header/banner.jpg) no-repeat center;
 	  	background-size: cover;
 		}
+		&.tourism {
+			.header-title {
+				top: 15%;
+			}
+		}
 	  .header-title {
 	  	position: absolute;
 	  	top: 75%;
