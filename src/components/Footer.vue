@@ -60,8 +60,10 @@
 </script>
 <style scoped lang="scss">
 	.footer {
-		padding-top: 15px;
 		background: #fff;
+		@media(min-width: 768px) {
+			padding-top: 20px;
+		}
 		.flex-row {
 			@media(min-width: 768px) {
 				width: 85%;

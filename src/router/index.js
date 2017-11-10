@@ -10,6 +10,9 @@ import PhotoOversea from '@/pages/detail/photo_oversea'
 import Tourism from '@/pages/detail/tourism'
 import Finance from '@/pages/detail/finance'
 import System from '@/pages/detail/system'
+import About from '@/pages/detail/about'
+import Join from '@/pages/detail/join'
+import Marketing from '@/pages/detail/marketing'
 
 const routes = [
   {
@@ -72,6 +75,21 @@ const routes = [
         path: 'system',
         name: '系统服务',
         component: System,
+      },
+      {
+        path: 'about',
+        name: '关于我们',
+        component: About,
+      },
+      {
+        path: 'join',
+        name: '如何加盟',
+        component: Join,
+      },
+      {
+        path: 'marketing',
+        name: '营销服务',
+        component: Marketing,
       },
     ]
   }
