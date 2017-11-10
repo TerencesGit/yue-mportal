@@ -6,6 +6,10 @@
 				<router-view></router-view>
 			</transition>
 	  </keep-alive>
+	  	<div class="btn-top transition" v-show="asideShow" @click="toTop">
+				<!-- <i class="el-icon-arrow-up"></i> -->
+				<span>顶部</span>
+			</div>
 		<FooterComp></FooterComp>
 	</section>
 </template>
@@ -25,8 +29,8 @@
 		},
 		methods: {
 			scroll() {
-				let asideTop = window.screen.availHeight - 400;
-				this.asideShow = window.scrollY >= asideTop ? true : false;
+				let asideTops = window.screen.availHeight - 400;
+				this.asideShow = window.scrollY >= 100 ? true : false;
 			},
 			getUserInfo() {
 	      getMyInfo().then(res => {
@@ -41,6 +45,21 @@
 	        this.$catchError(err)
 	      })
 	    },
+	    toTop () {
+	    	let timer = null;
+	      let gotoTop = () => {
+	        let currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
+	        currentPosition -= currentPosition*0.2;
+	        if (currentPosition > 0) {
+	          window.scrollTo(0, currentPosition);
+	        } else {
+	          window.scrollTo(0, 0);
+	          clearInterval(timer);
+	          timer = null;
+	        }
+	      }
+	      timer = setInterval(gotoTop, 1)
+	    }
 		},
 		mounted () {
 			this.asideShow = false;
@@ -54,3 +73,23 @@
 		}
 	}
 </script>
+<style scoped lang="scss">
+	.btn-top {
+		position: fixed;
+		right: 20px;
+		bottom: 100px;
+		z-index: 999;
+		width: 36px;
+		height: 36px;
+		line-height: 36px;
+		text-align: center;
+		color: #999;
+		cursor: pointer;
+		background: #fff;
+		border: 1px solid #e5e5e5;
+		span {
+			display: block;
+			font-size: 12px;
+		}
+	}
+</style>

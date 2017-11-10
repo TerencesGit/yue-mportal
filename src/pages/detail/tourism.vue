@@ -10,7 +10,7 @@
 					<img src="../../assets/img/tourism/tourism_title.png" alt="">
 				</div>
 				<div class="text-center">
-					<img src="../../assets/img/tourism/tourism_pic1.jpg" alt="">
+					<div><img src="../../assets/img/tourism/tourism_pic1.jpg" alt=""></div>
 					<img src="../../assets/img/tourism/tourism_pic2.jpg" alt="">
 					<img src="../../assets/img/tourism/tourism_pic3.jpg" alt="">
 					<img src="../../assets/img/tourism/tourism_pic4.jpg" alt="">
@@ -66,6 +66,13 @@
 			@media (min-width: 768px) {
 		  	padding: 30px 10%;
 		  	background: #F5F4EF;
+			}
+		}
+		.text-center {
+			width: 90%;
+			margin: auto;
+			img {
+				margin-top: -4px;
 			}
 		}
 		.banner {

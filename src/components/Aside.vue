@@ -27,39 +27,11 @@
 						</li>
 						<li>
 							<router-link to="join">如何加盟</router-link>
-							<!-- <span @click="handleJoin">加盟我们</span> -->
 						</li>
 					</ul>
 				</nav>
 			</transition>
 		</aside>
-		<!-- <el-dialog :visible.sync="formVisible" :show-close="false" size="tiny">
-			<div slot="title" class="dialog-title">
-				<h2>加盟我们</h2>
-			</div>
-			<form onsubmit="return false">
-				<div class="form-item">
-					<label class="form-item__label">姓名</label>
-					<input type="text" v-model="form.name" class="form-item__input" required>
-				</div>
-				<div class="form-item">
-					<label class="form-item__label">联系方式</label>
-					<input type="text" v-model="form.mobile" class="form-item__input" required>
-				</div>
-				<div class="form-item">
-					<label class="form-item__label">企业名称</label>
-					<input type="text" v-model="form.partnerName" class="form-item__input" required>
-				</div>
-				<div class="form-item textarea">
-					<label class="form-item__label">备注</label>
-					<textarea rows="3" v-model="form.note"></textarea>
-				</div>
-				<div class="form-item submit">
-					<el-button native-type="reset" @click="formVisible = false">取消</el-button>
-					<el-button native-type="submit" type="primary" @click="submitForm">提交</el-button>
-				</div>
-			</form>
-		</el-dialog> -->
 	</section>
 </template>
 <script>
@@ -74,31 +46,12 @@
 		data () {
 			return {
 				navShow: true,
-				form: {
-					name: '',
-					mobile: '',
-					partnerName: '',
-					note: ''
-				},
-				formVisible: false,
-				submited: false,
 			}
 		},
 		methods: {
 			toggleShow() {
 				// this.navShow = !this.navShow;
 				this.$router.push('/')
-			},
-			handleJoin() {
-				if (this.submited) {
-					this.$notify({
-						type: 'warning',
-						title: '提示',
-						message: '已提交加盟信息，请等待管理员联系'
-					})
-				} else {
-					this.formVisible = true;
-				}
 			},
 		}
 	}
@@ -109,20 +62,21 @@
 		top: 100px;
 		left: 0;
 		z-index: 999;
+		font-family: 'Microsoft Yahei';
 		@media (max-width: 640px) {
 			display: none;
 		}
-		// width: 120px;
 		.logo {
-			padding: 10px;
+			padding: 5px;
 			text-align: center;
 			background: #028AEE;
 			span {
 				display: inline-block;
-				width: 41px;
-				height: 41px;
+				width: 30px;
+				height: 30px;
 				cursor: pointer;
 				background: url(../assets/img/aside_logo.png) no-repeat center;
+				background-size: cover;
 			}
 		}
 	}
@@ -131,7 +85,6 @@
 		background: #DEF0FE;
 		li {
 			padding: 5px;
-			font-size: 16px;
 			letter-spacing: 4px;
 			// border-bottom: 1px solid #9CCEF3;
 			// &:last-child {
@@ -146,32 +99,12 @@
 			a {
 				display: inline-block;
 				width: 100%;
-				padding: 0 15px;
+				padding: 0 8px;
 				font-size: 14px;
 			}
 			span {
 				color: #337ab7;
 				cursor: pointer;
-			}
-		}
-	}
-	.dialog-title {
-		// text-align: center;
-		color: #2DAEB9;
-		font-size: 20px;
-	}
-	.form-item {
-		&.submit {
-			margin-top: 30px;
-		}
-		&.textarea {
-			height: 76px;
-			textarea {
-				flex: 1;
-				border: none;
-				outline: none;
-				resize: none;
-				background: transparent;
 			}
 		}
 	}
