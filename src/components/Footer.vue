@@ -2,27 +2,27 @@
 	<footer class="footer">
 		<div class="flex-row navbar">
 			<router-link to="/detail/photography" class="flex-col">
-				<img src="../assets/img/footer/nav1.jpg" class="p-show">
+				<img src="../assets/img/footer/p_nav1.png" class="p-show">
 				<img src="../assets/img/footer/m_nav1.png" class="m-show">
 			</router-link>
 		  <router-link to="/detail/tourism" class="flex-col">
-		  	<img src="../assets/img/footer/nav2.jpg" class="p-show">
+		  	<img src="../assets/img/footer/p_nav2.png" class="p-show">
 				<img src="../assets/img/footer/m_nav2.png" class="m-show">
 			</router-link>
 			<router-link to="/detail/finance" class="flex-col">
-				<img src="../assets/img/footer/nav3.jpg" class="p-show">
+				<img src="../assets/img/footer/p_nav3.png" class="p-show">
 				<img src="../assets/img/footer/m_nav3.png" class="m-show">
 			</router-link>
 			<router-link to="/detail/system" class="flex-col">
-				<img src="../assets/img/footer/nav4.jpg" class="p-show">
+				<img src="../assets/img/footer/p_nav4.png" class="p-show">
 				<img src="../assets/img/footer/m_nav4.png" class="m-show">
 			</router-link>
 			<router-link to="/detail/marketing" class="flex-col">
-				<img src="../assets/img/footer/nav5.jpg" class="p-show">
+				<img src="../assets/img/footer/p_nav5.png" class="p-show">
 				<img src="../assets/img/footer/m_nav5.png" class="m-show">
 			</router-link>
 			<router-link to="/detail/join" class="flex-col">
-				<img src="../assets/img/footer/nav6.jpg" class="p-show">
+				<img src="../assets/img/footer/p_nav6.png" class="p-show">
 				<img src="../assets/img/footer/m_nav6.png" class="m-show">
 			</router-link>
 		</div>
@@ -60,6 +60,7 @@
 </script>
 <style scoped lang="scss">
 	.footer {
+		padding-top: 10px;
 		background: #fff;
 		@media(min-width: 768px) {
 			padding-top: 20px;

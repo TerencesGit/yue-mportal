@@ -5,28 +5,42 @@
 			<img slot="scroll-button" src="../../assets/img/arrow_down_yue.png">
 		</HeaderComp>
 		<div class="main">
-			<div class="container">
+			<div class="reason-section">
 				<div class="main-title">
-					<img src="../../assets/img/tourism/tourism_title.png" alt="">
+					<img src="../../assets/img/tourism/banner2_title.png" alt="">
 				</div>
-				<div class="text-center">
-					<div><img src="../../assets/img/tourism/tourism_pic1.jpg" alt=""></div>
-					<img src="../../assets/img/tourism/tourism_pic2.jpg" alt="">
-					<img src="../../assets/img/tourism/tourism_pic3.jpg" alt="">
-					<img src="../../assets/img/tourism/tourism_pic4.jpg" alt="">
-					<img src="../../assets/img/tourism/tourism_pic5.jpg" alt="">
-					<img src="../../assets/img/tourism/tourism_pic6.jpg" alt="">
-					<img src="../../assets/img/tourism/tourism_pic7.jpg" alt="">
-					<img src="../../assets/img/tourism/tourism_pic8.jpg" alt="">
+				<div class="container p-show">
+					<img src="../../assets/img/tourism/tourism_pic1.jpg" class="responsive-img">
+					<img src="../../assets/img/tourism/tourism_pic2.jpg" class="responsive-img">
+					<img src="../../assets/img/tourism/tourism_pic3.jpg" class="responsive-img">
+					<img src="../../assets/img/tourism/tourism_pic4.jpg" class="responsive-img">
+					<img src="../../assets/img/tourism/tourism_pic5.jpg" class="responsive-img">
+					<img src="../../assets/img/tourism/tourism_pic6.jpg" class="responsive-img">
+					<img src="../../assets/img/tourism/tourism_pic7.jpg" class="responsive-img">
+					<img src="../../assets/img/tourism/tourism_pic8.jpg" class="responsive-img">
+				</div>
+				<div class="m-show">
+					<img src="../../assets/img/tourism/m_banner1.jpg" class="responsive-img">
+					<img src="../../assets/img/tourism/m_banner2.jpg" class="responsive-img">
+					<img src="../../assets/img/tourism/m_banner3.jpg" class="responsive-img">
+					<img src="../../assets/img/tourism/m_banner4.jpg" class="responsive-img">
+					<img src="../../assets/img/tourism/m_banner5.jpg" class="responsive-img">
+					<img src="../../assets/img/tourism/m_banner6.jpg" class="responsive-img">
+					<img src="../../assets/img/tourism/m_banner7.jpg" class="responsive-img">
+					<img src="../../assets/img/tourism/m_banner8.jpg" class="responsive-img">
 				</div>
 			</div>
-			<div class="banner">
-				<img src="../../assets/img/tourism/yue_banner.jpg" class="responsive-img">
+			<div>
+				<img src="../../assets/img/tourism/yue_banner.jpg" class="responsive-img p-show">
+				<img src="../../assets/img/tourism/m_banner9.png" class="responsive-img m-show">
 			</div>
-			<div class="banner view">
-				<img src="../../assets/img/tourism/view.jpg" class="responsive-img">
+			<div class="vision">
+				<div class="container">
+					<img src="../../assets/img/tourism/vision.jpg" class="responsive-img p-show">
+					<img src="../../assets/img/tourism/yue_vision.jpg" class="responsive-img m-show">
+				</div>
 			</div>
-			<div class="banner">
+			<div>
 				<img src="../../assets/img/yue_map.jpg" class="responsive-img">
 			</div>
 		</div>
@@ -59,34 +73,24 @@
 		@media (min-width: 768px) {
 	  	background: #F5F4EF;
 		}
-		.main-title {
-			padding: 30px 60px;
-			text-align: center;
+		.reason-section {
+			width: 100%;
+			padding: 30px 0;
+			@media (min-width: 768px) {
+				padding: 80px 10%;
+			}
+			.main-title {
+				padding: 0 60px 20px;
+				text-align: center;
+				@media (min-width: 768px) {
+			  	padding: 0 10% 30px;
+				}
+			}
+		}
+		.vision {
 			background: #fff;
 			@media (min-width: 768px) {
-		  	padding: 30px 10%;
-		  	background: #F5F4EF;
-			}
-		}
-		.text-center {
-			width: 90%;
-			margin: auto;
-			img {
-				margin-top: -4px;
-			}
-		}
-		.banner {
-			margin-top: 10px;
-			@media (min-width: 768px) {
-		  	margin-top: 30px;
-			}
-			&.view {
-				padding: 20px 0;
-				margin: 20px 10px;
-				@media (min-width: 768px) {
-			  	margin: 0;
-			  	background: #fff;
-				}
+				padding: 80px 10%;
 			}
 		}
 		.row {

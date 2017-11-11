@@ -60,6 +60,9 @@
 	  	@media (min-width: 768px) {
 	  		top: 50%;
 	  	}
+	  	img {
+	  		margin: auto;
+	  	}
 	  }
 	  .header-icon {
 	    position: absolute;

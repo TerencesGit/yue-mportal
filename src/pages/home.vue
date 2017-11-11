@@ -1,13 +1,6 @@
 <template>
 	<section>
-		<header class="full-header">
-			<div class="header-title">
-				<img src="../assets/img/header/banner_title.png">
-			</div>
-			<div class="header-button" @click="scrollDown">
-				<img src="../assets/img/header/arrow_down_yue.png">
-			</div>
-		</header>
+		<HeaderComp></HeaderComp>
 		<main>
 			<div class="flex-row">
 				<div class="flex-col p-show scale">
@@ -78,10 +71,10 @@
 						<source src="http://1254456297.vod2.myqcloud.com/2f3b5ff4vodtransgzp1254456297/3388b0459031868223334457147/v.f40.mp4" type="video/mp4">
 					</video>
 					<div class="film-view" @click="handlePaused">
-						<img v-show="!isPlayed" src="../assets/img/home/play_button.png" class="play-button" @click.stop="handlePlayed">
+						<img v-show="!isPlayed" src="../assets/img/home/play_button.png" class="play-button p-show" @click.stop="handlePlayed">
 					</div>
 				</div>
-				<div class="flex-col p-show">
+				<div class="flex-col p-show scale">
 					<img src="../assets/img/home/banner7.png">
 					<router-link to="/detail/join">
 						<img src="../assets/img/home/banner_link7.png" class="banner-link join">
@@ -94,17 +87,19 @@
 				</div>
 			</div>
 		</main>
-		<footer class="footer p-show">
+		<footer class="footer">
 			<span class="footer-logo"></span>
 		</footer>
 	</section>
 </template>
 <script>
 	import { getMyInfo } from '@/api'
+	import HeaderComp from '@/components/Header'
 	import FooterComp from '@/components/Footer'
 	export default {
 		components: {
-			FooterComp
+			HeaderComp,
+			FooterComp,
 		},
 		data () {
 			return {
@@ -165,6 +160,11 @@
 		mounted() {
 			window.scrollTo(0, 0)
 			this.getUserInfo()
+			if(document.getElementById('iconDiv1')) return;
+			let _53code = document.createElement("script");
+		  _53code.src = "http://tb.53kf.com/code/code/9006078/1";
+		  let s = document.getElementsByTagName("script")[0]; 
+		  s.parentNode.insertBefore(_53code, s);
 		}
 	}
 </script>
@@ -266,17 +266,22 @@
 			height: 100%;
 		}
 		.play-button {
+			margin: auto;
 			cursor: pointer;
 		}
 	}
 	.footer {
-		padding: 15px 0;
+		padding: 10px 0;
 		text-align: center;
 		background: #fff;
+		@media (min-width: 768px) {
+			padding: 15px 0;
+		}
 		.footer-logo {
 			display: inline-block;
 			width: 25px;
 			height: 25px;
+			vertical-align: middle;
 			background: url(../assets/img/footer/yue_icon.png) no-repeat center;
 			background-size: cover;
 			@media (min-width: 768px) {

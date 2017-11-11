@@ -22,7 +22,6 @@
 							<p>客样照+视频 全方位立体化展示</p>
 							<p>保证品牌 以加盟商品牌对客服务</p>
 							<p>你即刻成为最全面的婚嫁电商平台</p>
-							<p class="hidden">-</p>
 							<router-link to="photography" class="link-button"></router-link> 
 						</div>
 					</div>
@@ -37,7 +36,6 @@
 							<p>获取更高营业额及利润</p>
 							<p>客人省时省力快速成交</p>
 							<p>你即刻成为像携程一样的旅游电商平台</p>
-							<p class="hidden">-</p>
 							<router-link to="tourism" class="link-button"></router-link>
 						</div>
 					</div>
@@ -97,6 +95,12 @@
 				<img src="../../assets/img/about/m_banner7.png" class="responsive-img">
 				<img src="../../assets/img/about/m_banner8.png" class="responsive-img">
 			</div>
+			<!-- <div class="yue-about p-show">
+				<div class="container">
+					<img src="../../assets/img/about/about_view.jpg" alt="">
+					<img src="../../assets/img/about/about_text_bg.png" alt="">
+				</div>
+			</div> -->
 			<div class="p-show">
 				<img src="../../assets/img/about/view.jpg" class="responsive-img">
 				<div class="about-wrap">
@@ -165,7 +169,7 @@
 		.intro {
 			padding: 15px;
 		}
-		> .container {
+		.container {
 			max-width: 1180px;
 			width: 80%;
 			margin: 30px auto;
@@ -197,9 +201,15 @@
 		color: #fff;
 		&.photo {
 			background: #62B5E4;
+			h3 {
+				margin: 20px 0;
+			}
 		}
 		&.tourism {
 			background: #656E81;
+			h3 {
+				margin: 20px 0;
+			}
 		}
 		&.finance {
 			color: #666;
@@ -240,6 +250,10 @@
 			@media (min-width: 1200px) {
 		    font-size: 16px;
 		    line-height: 1.8;
+		  }
+		  @media (min-width: 1900px) {
+		    font-size: 16px;
+		    line-height: 2.2;
 		  }
 		}
 		.link-button {
@@ -288,10 +302,10 @@
 				top: 15%;
 				height: 70%;
 			}
-			@media(min-width: 1900px) {
-				top: 20%;
-				height: 60%;
-			}
+			// @media(min-width: 1900px) {
+			// 	top: 20%;
+			// 	height: 60%;
+			// }
 			.about-left {
 				position: absolute;
 				top: 0;
@@ -300,11 +314,13 @@
 				width: 45%;
 				padding: 2rem;
 				background: url(../../assets/img/about/about_view.jpg);
-				background-size: cover;
+				background-size: 100% 100%;
 				.logo {
-					width: 40%;
-					height: 30%;
-					background: url(../../assets/img/about/about_logo.png);
+					width: 38%;
+					height: 32%;
+					max-width: 192px;
+					max-height: 116px;
+					background: url(../../assets/img/about/about_logo.png) no-repeat center;
 					background-size: 100% 100%;
 				}
 				.date {
@@ -320,22 +336,35 @@
 				bottom: 2rem;
 				right: 0;
 				width: 62%;
-				padding: 2rem 3rem;
+				padding: 1rem 2rem;
 				background: url(../../assets/img/about/about_text_bg.png);
 				background-size: cover;
 				box-shadow: 1px 1px 1px 1px #ccc;
 				// @media (min-width: 1440px) {
 				// 	padding: 2.5rem
 				// }
-				// @media (min-width: 1900px) {
-				// 	padding: 4rem
-				// }
+				@media (min-width: 1900px) {
+					padding: 3rem 4rem
+				}
 				.about-detail {
 					display: flex;
 					.detail-left {
 						flex: 1;
+						@media(min-width: 1900px) {
+							padding-top: 15px;
+						}
 						.title {
-							font-size: 24px;
+							font-size: 20px;
+							@media(min-width: 1200px) {
+								margin: 10px 0;
+								font-size: 22px;
+							}
+							@media(min-width: 1440px) {
+								margin: 15px 0;
+							}
+							@media(min-width: 1900px) {
+								font-size: 26px;
+							}
 							i {
 								font-style: normal;
 								color: #666;
@@ -347,6 +376,10 @@
 							color: #666;
 							@media (min-width: 1200px) {
 								font-size: 14px;
+							}
+							@media (min-width: 1900px) {
+								font-size: 16px;
+								line-height: 2;
 							}
 						}
 						.more {
@@ -384,12 +417,12 @@
 							display: flex;
 							flex-direction: column;
 							height: 100%;
-							@media (min-width: 1200px) {
+							@media (min-width: 1440px) {
 								margin-top: 15px;
 							}
 							li {
 								flex: 1;
-								padding-top: 5%;
+								padding-top: 10px;
 								text-align: center;
 								span {
 									display: inline-block;

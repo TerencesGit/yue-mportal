@@ -1,7 +1,8 @@
 <template>
 	<section>
 		<HeaderComp class="photo">
-			<img slot="header-title" src="../../assets/img/photo/photo_logo.png">
+			<img slot="header-title" src="../../assets/img/photo/banner_title.png" class="p-show">
+			<img slot="header-title" src="../../assets/img/photo/m_banner_title.png" class="m-show">
 			<img slot="scroll-button" src="../../assets/img/arrow_down.png">
 		</HeaderComp>
 		<main>
@@ -22,43 +23,51 @@
 				<div class="flex-col micro-film p-show">
 					<div class="flex-row-vertical mv-wrap">
 						<div class="flex-col mv-header">
-							<img src="../../assets/img/photo/film_title.png" class="responsive-img">
+							<img src="../../assets/img/photo/mv_title.png" class="responsive-img">
 						</div>
 						<div class="flex-col mv-body">
 							<video id="yueVideo" class="mv" poster="http://img14.360buyimg.com/shaidan/s645x515_jfs/t11830/122/255851217/99035/296021db/59eb164eN4722184d.jpg" src="http://1254456297.vod2.myqcloud.com/2f3b5ff4vodtransgzp1254456297/3388b0459031868223334457147/v.f40.mp4" controls @play="handlePlayed"></video>
 						</div>
 						<div class="flex-col mv-footer">
 							<img src="../../assets/img/photo/logo.png" class="logo">
-							<img src="../../assets/img/photo/film_footer.png" class="responsive-img">
+							<img src="../../assets/img/photo/mv_footer.png" class="responsive-img">
 						</div>	
 					</div>
 				</div>
 			</div>
 			<div class="flex-row-vertical mv-wrap m-show">
 				<div class="flex-col mv-header">
-					<img src="../../assets/img/photo/film_title.png" class="responsive-img">
+					<img src="../../assets/img/photo/mv_title.png" class="responsive-img">
 				</div>
 				<div class="flex-col mv-body">
 					<video id="yueVideo" class="mv" poster="http://img14.360buyimg.com/shaidan/s645x515_jfs/t11830/122/255851217/99035/296021db/59eb164eN4722184d.jpg" src="http://1254456297.vod2.myqcloud.com/2f3b5ff4vodtransgzp1254456297/3388b0459031868223334457147/v.f40.mp4" controls @play="handlePlayed"></video>
 				</div>
 				<div class="flex-col mv-footer">
 					<img src="../../assets/img/photo/logo.png" class="logo">
-					<img src="../../assets/img/photo/film_footer.png" class="responsive-img">
+					<img src="../../assets/img/photo/mv_footer.png" class="responsive-img">
 				</div>	
 			</div>
 			<div class="photo-show">
-				<div class="container">
+				<div class="p-show">
+					<router-link to="native">
+						<img src="../../assets/img/photo/native.jpg" class="responsive-img">
+					</router-link>
+					<router-link to="oversea">
+						<img src="../../assets/img/photo/oversea.jpg" class="responsive-img">
+					</router-link>
+				</div>
+				<div class="m-show">
 					<div class="show-title">
-						<img src="../../assets/img/photo/show_title.png" class="responsive-img">
+						<img src="../../assets/img/photo/m_show_title.png" class="responsive-img">
 					</div>
 					<div class="show-native">
 						<router-link to="native">
-							<img src="../../assets/img/photo/show_native.jpg" class="responsive-img">
+							<img src="../../assets/img/photo/m_native_show.jpg" class="responsive-img">
 						</router-link>
 					</div>
 					<div class="show-oversea">
 						<router-link to="oversea">
-							<img src="../../assets/img/photo/show_oversea.jpg" class="responsive-img">
+							<img src="../../assets/img/photo/m_oversea_show.jpg" class="responsive-img">
 						</router-link>
 					</div>
 				</div>
@@ -104,7 +113,7 @@
 	}
 	.advantage {
 		width: 100%;
-		padding: 35px;
+		padding: 20px;
 		background: #fff;
 		@media(min-width: 768px) {
 			padding: 100px 10%;
@@ -128,7 +137,7 @@
     	}
     }
 		.mv-header {
-			padding: 15px 30%;
+			padding: 15px 25%;
 			@media (min-width: 768px) {
 				padding: 15px 27%;
 			}
@@ -140,7 +149,7 @@
 	  	}
 	  }
 		.mv-footer {
-			padding: 10px 15%;
+			padding: 10px 10%;
 			text-align: center;
 			@media (min-width: 768px) {
 				padding: 15px 15%;
@@ -157,7 +166,7 @@
   	padding: 30px;
   	background: #fff;
   	@media(min-width: 768px) {
-			padding: 30px 10%;
+			padding: 0;
 		}
   	.show-title {
   		width: 75%;
