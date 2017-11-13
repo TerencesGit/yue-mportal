@@ -41,7 +41,8 @@
 				</div>
 			</div>
 			<div>
-				<img src="../../assets/img/yue_map.jpg" class="responsive-img">
+				<img src="../../assets/img/yue_map.jpg" class="responsive-img p-show">
+				<img src="../../assets/img/m_map.png" class="responsive-img m-show">
 			</div>
 		</div>
 	</section>
@@ -77,7 +78,7 @@
 			width: 100%;
 			padding: 30px 0;
 			@media (min-width: 768px) {
-				padding: 80px 10%;
+				padding: 60px 10%;
 			}
 			.main-title {
 				padding: 0 60px 20px;

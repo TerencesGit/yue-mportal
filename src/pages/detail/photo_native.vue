@@ -83,7 +83,7 @@
 					padding: 30px 0;
 				}
 				img {
-					width: 80%;
+					width: 60%;
 					margin: 0 auto;
 				}
 			}

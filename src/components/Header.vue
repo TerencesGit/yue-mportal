@@ -67,7 +67,7 @@
 	  .header-icon {
 	    position: absolute;
 	    left: 50%;
-	    bottom: 10%;
+	    bottom: 6%;
 	    width: 30px;
 	    margin-left: -15px;
 	    text-align: center;

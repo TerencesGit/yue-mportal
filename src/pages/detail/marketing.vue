@@ -61,7 +61,7 @@
 							<img src="../../assets/img/marketing/service6.png" class="responsive-img">
 							<div>
 								<h4>信息流广告优化</h4>
-								<p>信息流广告是查看超级APP资讯中插入推广信息，并依据用户群体属性，喜好进行精准推荐。以文字+图片+链接方式展现，通常采用按点击CPC、按展示CPM、按照效果OCPC,按照时段CPT，按保量GD等模式收费。</p>
+								<p>信息流广告是查看超级APP资讯中插入推广信息，并依据用户群体属性，喜好进行精准推荐。以文字+图片+链接方式展现，通常采用按点击CPC、按展示CPM、按照效果OCPC，按照时段CPT，按保量GD等模式收费。</p>
 							</div>
 						</div>
 					</div>
@@ -249,7 +249,7 @@
 		h3 {
 			display: block;
 			margin: 5px 0;
-			font-size: 18px;
+			font-size: 24px;
 			font-weight: 600;
 		}
 		p {
@@ -356,7 +356,7 @@
 			}
 		}
 		.channel-list {
-			margin: 3rem 0;
+			margin: 4rem 0;
 		}
 		.flex {
 			margin: 1.2rem 0;
@@ -374,7 +374,7 @@
 			width: 70%;
 		}
 		.about-title {
-			margin-bottom: 1rem;
+			margin-bottom: 4rem;
 			.title {
 				&::before, &::after {
 					width: 0;
@@ -382,6 +382,9 @@
 						width: 25%;
 					}
 				}
+			}
+			p {
+				margin: 0.6rem 0;
 			}
 		}
 		.flex {
@@ -393,26 +396,29 @@
 			> img {
 				width: 40%;
 				height: auto;
-				// margin: 2rem 0;
 				transition: all .2s;
 				&:hover {
 					transform: scale(1.2);
 				}
 			}
+			> div {
+				margin-top: 2rem;
+			}
 			h4 {
-				margin: .5rem;
-				font-size: 1rem;
+				margin: 1rem;
+				font-size: 14px;
 				font-weight: 600;
 			}
 			p {
-				font-size: .8rem;
 				color: #666;
+				font-size: 13px;
 			}
 		}
 	}
 	.plan {
 		width: 95%;
 		margin: 5rem auto 1rem;
+		padding: 1rem 0 3rem;
 		@media (min-width: 768px) {
 			width: 80%;
 		}
@@ -448,8 +454,11 @@
 				}
 				text-align: center;
 				h4 {
-					font-size: 1rem;
+					font-size: 16px;
 					font-weight: bold;
+				}
+				p {
+					font-size: 14px;
 				}
 				.underline {
 					display: inline-block;

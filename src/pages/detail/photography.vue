@@ -7,7 +7,8 @@
 		</HeaderComp>
 		<main>
 			<div class="map">
-				<img src="../../assets/img/yue_map.jpg" class="responsive-img">
+				<img src="../../assets/img/yue_map.jpg" class="responsive-img p-show">
+				<img src="../../assets/img/m_map.png" class="responsive-img m-show">
 			</div>
 			<div class="advantage">
 				<div class="container">
@@ -43,7 +44,7 @@
 					<video id="yueVideo" class="mv" poster="http://img14.360buyimg.com/shaidan/s645x515_jfs/t11830/122/255851217/99035/296021db/59eb164eN4722184d.jpg" src="http://1254456297.vod2.myqcloud.com/2f3b5ff4vodtransgzp1254456297/3388b0459031868223334457147/v.f40.mp4" controls @play="handlePlayed"></video>
 				</div>
 				<div class="flex-col mv-footer">
-					<img src="../../assets/img/photo/logo.png" class="logo">
+					<!-- <img src="../../assets/img/photo/logo.png" class="logo"> -->
 					<img src="../../assets/img/photo/mv_footer.png" class="responsive-img">
 				</div>	
 			</div>
@@ -72,8 +73,9 @@
 					</div>
 				</div>
 			</div>
-			<div class="footer">
-				<img src="../../assets/img/photo/banner3.jpg" class="responsive-img">
+			<div class="footer"> 
+				<img src="../../assets/img/photo/banner3.jpg" class="responsive-img p-show">
+				<img src="../../assets/img/photo/m_banner3.png" class="responsive-img m-show">
 			</div>
 		</main>
 	</section>
@@ -137,7 +139,7 @@
     	}
     }
 		.mv-header {
-			padding: 15px 25%;
+			padding: 30px 30% 15px;
 			@media (min-width: 768px) {
 				padding: 15px 27%;
 			}
@@ -149,7 +151,7 @@
 	  	}
 	  }
 		.mv-footer {
-			padding: 10px 10%;
+			padding: 20px 15%;
 			text-align: center;
 			@media (min-width: 768px) {
 				padding: 15px 15%;

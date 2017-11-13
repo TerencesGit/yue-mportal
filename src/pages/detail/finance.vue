@@ -53,7 +53,7 @@
 		.yuebaifen, 
 		.advantage, 
 		.supply-chain {
-			padding: 30px;
+			padding: 18px;
 		}
 	}
 </style>
