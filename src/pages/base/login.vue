@@ -134,7 +134,7 @@
 		}
 	}
 	.form-group {
-		margin: 10px 0;
+		margin: 15px 0;
 		.form-input {
 			width: 100%;
 			padding: 8px 12px;
@@ -143,7 +143,7 @@
 		}
 		.mint-button {
 			width: 100%;
-			margin-top: 10px;
+			// margin-top: 10px;
 			border-radius: 0;
 			color: #fff;
 			font-size: 18px;

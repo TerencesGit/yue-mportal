@@ -5,69 +5,72 @@
 			<div class="flex-row">
 				<div class="flex-col p-show scale">
 					<img src="../assets/img/home/banner1.png">
-					<router-link to="/detail/about">
+					<router-link to="/detail/about" target="_blank">
 						<img src="../assets/img/home/banner_link1.png" class="banner-link about">
 					</router-link>
 				</div>
 				<router-link to="/detail/about" class="flex-col m-show">
-					<img src="../assets/img/home/m_banner1.png">
+					<img src="../assets/img/home/m_banner_red1.png">
 				</router-link>
 			</div>
 			<div class="flex-row">
 				<div class="flex-col p-show scale">
 					<img src="../assets/img/home/banner2.png">
-					<router-link to="/detail/photography">
+					<router-link to="/detail/photography" target="_blank">
 						<img src="../assets/img/home/banner_link2.png" class="banner-link photo">
 					</router-link>
 				</div>
 				<div class="flex-col p-show scale">
 					<img src="../assets/img/home/banner3.png">
-					<router-link to="/detail/tourism">
+					<router-link to="/detail/tourism" target="_blank">
 						<img src="../assets/img/home/banner_link3.png" class="banner-link tourism">
 					</router-link>
 				</div> 
 				<router-link to="/detail/photography" class="flex-col m-show">
-					<img src="../assets/img/home/m_banner2.png">
+					<img src="../assets/img/home/m_banner_red2.png">
 				</router-link>
 				<router-link to="/detail/tourism" class="flex-col m-show">
-					<img src="../assets/img/home/m_banner3.png">
+					<img src="../assets/img/home/m_banner_red3.png">
 				</router-link>
 				<router-link to="/detail/finance" class="flex-col m-show">
-					<img src="../assets/img/home/m_banner4.png">
+					<img src="../assets/img/home/m_banner_red4.png">
 				</router-link>
 			</div>
 			<div class="flex-row">
 				<div class="flex-col p-show scale">
 					<img src="../assets/img/home/banner4.png">
-					<router-link to="/detail/finance">
+					<router-link to="/detail/finance" target="_blank">
 						<img src="../assets/img/home/banner_link4.png" class="banner-link">
 					</router-link>
 				</div>
 				<div class="flex-col p-show scale">
 					<img src="../assets/img/home/banner5.png">
-					<router-link to="/detail/system">
+					<router-link to="/detail/system" target="_blank">
 						<img src="../assets/img/home/banner_link5.png" class="banner-link">
 					</router-link>
 				</div>
 				<div class="flex-col p-show scale">
 					<img src="../assets/img/home/banner6.png">
-					<router-link to="/detail/marketing">
+					<router-link to="/detail/marketing" target="_blank">
 						<img src="../assets/img/home/banner_link6.png" class="banner-link">
 					</router-link>
 				</div>
 				<router-link to="/detail/system" class="flex-col m-show">
-					<img src="../assets/img/home/m_banner5.png">
+					<img src="../assets/img/home/m_banner_red5.png">
 				</router-link>
 				<router-link to="/detail/marketing" class="flex-col m-show">
-					<img src="../assets/img/home/m_banner6.png">
+					<img src="../assets/img/home/m_banner_red6.png">
 				</router-link>
 				<router-link to="/detail/join" class="flex-col m-show">
-					<img src="../assets/img/home/m_banner7.png">
+					<img src="../assets/img/home/m_banner_red7.png">
 				</router-link>
 			</div>
 			<div class="flex-row">
 				<div class="flex-col film">
-					<video poster="http://img14.360buyimg.com/shaidan/s645x515_jfs/t11830/122/255851217/99035/296021db/59eb164eN4722184d.jpg" controls id="yueVideo" class="yue-video" @play="handlePlay" @pause="handlePause">
+					<video poster="http://img14.360buyimg.com/shaidan/s645x515_jfs/t11830/122/255851217/99035/296021db/59eb164eN4722184d.jpg" controls id="yueVideo" class="yue-video p-show" @play="handlePlay" @pause="handlePause">
+						<source src="http://1254456297.vod2.myqcloud.com/2f3b5ff4vodtransgzp1254456297/3388b0459031868223334457147/v.f40.mp4" type="video/mp4">
+					</video>
+					<video poster="http://img13.360buyimg.com/shaidan/s645x515_jfs/t11215/123/2077501155/73511/d0f924f1/5a0ff531Ne3168711.jpg" controls id="yueVideo" class="yue-video m-show" @play="handlePlay" @pause="handlePause">
 						<source src="http://1254456297.vod2.myqcloud.com/2f3b5ff4vodtransgzp1254456297/3388b0459031868223334457147/v.f40.mp4" type="video/mp4">
 					</video>
 					<div class="film-view" @click="handlePaused">
@@ -76,14 +79,15 @@
 				</div>
 				<div class="flex-col p-show scale">
 					<img src="../assets/img/home/banner7.png">
-					<router-link to="/detail/join">
+					<router-link to="/detail/join" target="_blank">
 						<img src="../assets/img/home/banner_link7.png" class="banner-link join">
 					</router-link>
 				</div>
 			</div>
 			<div class="flex-row">
 				<div class="flex-col intro">
-					<img src="../assets/img/home/banner8.jpg">
+					<img src="../assets/img/home/banner8.jpg" class="p-show">
+					<img src="../assets/img/home/m_banner_red8.png" class="m-show">
 				</div>
 			</div>
 		</main>
@@ -160,11 +164,11 @@
 		mounted() {
 			window.scrollTo(0, 0)
 			this.getUserInfo()
-			if(document.getElementById('iconDiv1')) return;
-			let _53code = document.createElement("script");
-		  _53code.src = "http://tb.53kf.com/code/code/9006078/1";
-		  let s = document.getElementsByTagName("script")[0]; 
-		  s.parentNode.insertBefore(_53code, s);
+			// if(document.getElementById('iconDiv1')) return;
+			// let _53code = document.createElement("script");
+		 //  _53code.src = "http://tb.53kf.com/code/code/9006078/1";
+		 //  let s = document.getElementsByTagName("script")[0]; 
+		 //  s.parentNode.insertBefore(_53code, s);
 		}
 	}
 </script>

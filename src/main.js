@@ -11,7 +11,7 @@ import '@/assets/css/main.scss'
 import Mock from './mock'
 Vue.use(Router)
 Vue.use(MintUI)
-Mock.bootstrap()
+// Mock.bootstrap()
 Vue.config.productionTip = false
 Vue.prototype.$catchError = (err) => {
   if(err.code === 'ECONNABORTED') {

@@ -7,12 +7,12 @@
 		<main class="main">
 			<div class="p-show">
 				<img src="../../assets/img/finance/yuebaifen.png" class="responsive-img">
-				<img src="../../assets/img/finance/product.png" class="responsive-img">
-				<img src="../../assets/img/finance/advantage.png" class="responsive-img">
-				<img src="../../assets/img/finance/application.png" class="responsive-img">
-				<img src="../../assets/img/finance/chain.png" class="responsive-img">
-				<img src="../../assets/img/finance/payment.jpg" class="responsive-img">
-				<img src="../../assets/img/finance/settlement.png" class="responsive-img">
+				<img src="../../assets/img/finance/product.jpg" class="responsive-img">
+				<img src="../../assets/img/finance/advantage.jpg" class="responsive-img">
+				<img src="../../assets/img/finance/application.jpg" class="responsive-img">
+				<img src="../../assets/img/finance/chain.jpg" class="responsive-img">
+				<img src="../../assets/img/finance/payment2.jpg" class="responsive-img">
+				<img src="../../assets/img/finance/settlement.jpg" class="responsive-img">
 			</div>
 			<div class="m-show">
 				<div class="yuebaifen">

@@ -57,6 +57,7 @@
 	</section>
 </template>
 <script>
+	import Md5 from '@/assets/js/md5'
 	import { requestRegist, getMobileSmsCode } from '@/api'
 	export default {
 		data () {
@@ -134,6 +135,8 @@
 					})
 					return;
 				}
+				data.password = Md5.hex_md5(this.form.password)
+				data.password2 = Md5.hex_md5(this.form.password2)
 				requestRegist(data).then(res => {
 					if(res.data.code === '0001') {
 						this.$router.push('/register_success')
@@ -186,7 +189,7 @@
 				}
 				.mint-button {
 					width: 100%;
-					margin-top: 10px;
+					// margin-top: 10px;
 					border-radius: 0;
 					color: #fff;
 					font-size: 18px;

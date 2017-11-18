@@ -308,7 +308,7 @@
 			}
 		}
 		.flex {
-			margin-bottom: 2rem;
+			margin: 2.5rem 0;
 		}
 		.flex-item {
 			transition: transform .3s;
@@ -328,10 +328,11 @@
 			h4 {
 				margin: 0;
 				padding: 5px 0;
-				font-size: 14px;
+				font-size: 15px;
+				font-weight: bold;
 			}
 			p {
-				font-size: 12px;
+				font-size: 14px;
 				color: #666;
 			}
 		}

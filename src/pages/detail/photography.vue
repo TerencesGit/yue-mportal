@@ -50,11 +50,14 @@
 			</div>
 			<div class="photo-show">
 				<div class="p-show">
-					<router-link to="native">
-						<img src="../../assets/img/photo/native.jpg" class="responsive-img">
+					<div class="show-title">
+						<img src="../../assets/img/photo/show_title.png" alt="">
+					</div>
+					<router-link to="native" class="show-native">
+						<img src="../../assets/img/photo/native_show.png" class="responsive-img">
 					</router-link>
-					<router-link to="oversea">
-						<img src="../../assets/img/photo/oversea.jpg" class="responsive-img">
+					<router-link to="oversea" class="show-oversea">
+						<img src="../../assets/img/photo/oversea_show.png" class="responsive-img">
 					</router-link>
 				</div>
 				<div class="m-show">
@@ -170,18 +173,28 @@
   	@media(min-width: 768px) {
 			padding: 0;
 		}
+		.p-show {
+			background: #F5F4EF;
+			.show-oversea {
+				img {
+					padding-bottom: 80px;
+				}
+			}
+		}
   	.show-title {
   		width: 75%;
   		margin: 0 auto 30px;
   		@media(min-width: 768px) {
 				width: 60%;
-				margin: 30px auto;
+				padding: 70px 0 20px;
 			}
   	}
   	.show-native {
 			margin: 30px auto;
 			@media(min-width: 768px) {
-				margin: 60px auto;
+				img {
+					margin: 60px auto;
+				}
 			}
   	}
   }
