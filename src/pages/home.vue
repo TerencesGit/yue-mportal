@@ -10,7 +10,7 @@
 					</router-link>
 				</div>
 				<router-link to="/detail/about" class="flex-col m-show">
-					<img src="../assets/img/home/m_banner_red1.png">
+					<img src="../assets/img/home/m_banner1.png">
 				</router-link>
 			</div>
 			<div class="flex-row">
@@ -27,13 +27,13 @@
 					</router-link>
 				</div> 
 				<router-link to="/detail/photography" class="flex-col m-show">
-					<img src="../assets/img/home/m_banner_red2.png">
+					<img src="../assets/img/home/m_banner2.png">
 				</router-link>
 				<router-link to="/detail/tourism" class="flex-col m-show">
-					<img src="../assets/img/home/m_banner_red3.png">
+					<img src="../assets/img/home/m_banner3.png">
 				</router-link>
 				<router-link to="/detail/finance" class="flex-col m-show">
-					<img src="../assets/img/home/m_banner_red4.png">
+					<img src="../assets/img/home/m_banner4.png">
 				</router-link>
 			</div>
 			<div class="flex-row">
@@ -56,23 +56,23 @@
 					</router-link>
 				</div>
 				<router-link to="/detail/system" class="flex-col m-show">
-					<img src="../assets/img/home/m_banner_red5.png">
+					<img src="../assets/img/home/m_banner5.png">
 				</router-link>
 				<router-link to="/detail/marketing" class="flex-col m-show">
-					<img src="../assets/img/home/m_banner_red6.png">
+					<img src="../assets/img/home/m_banner6.png">
 				</router-link>
 				<router-link to="/detail/join" class="flex-col m-show">
-					<img src="../assets/img/home/m_banner_red7.png">
+					<img src="../assets/img/home/m_banner7.png">
 				</router-link>
 			</div>
 			<div class="flex-row">
 				<div class="flex-col film">
-					<video poster="http://img14.360buyimg.com/shaidan/s645x515_jfs/t11830/122/255851217/99035/296021db/59eb164eN4722184d.jpg" controls id="yueVideo" class="yue-video p-show" @play="handlePlay" @pause="handlePause">
+					<video poster="http://img14.360buyimg.com/shaidan/s645x515_jfs/t11830/122/255851217/99035/296021db/59eb164eN4722184d.jpg" controls id="yueVideo" class="yue-video" @play="handlePlay" @pause="handlePause">
 						<source src="http://1254456297.vod2.myqcloud.com/2f3b5ff4vodtransgzp1254456297/3388b0459031868223334457147/v.f40.mp4" type="video/mp4">
 					</video>
-					<video poster="http://img13.360buyimg.com/shaidan/s645x515_jfs/t11215/123/2077501155/73511/d0f924f1/5a0ff531Ne3168711.jpg" controls id="yueVideo" class="yue-video m-show" @play="handlePlay" @pause="handlePause">
+					<!-- <video poster="http://img13.360buyimg.com/shaidan/s645x515_jfs/t11215/123/2077501155/73511/d0f924f1/5a0ff531Ne3168711.jpg" controls id="yueVideo" class="yue-video m-show" @play="handlePlay" @pause="handlePause">
 						<source src="http://1254456297.vod2.myqcloud.com/2f3b5ff4vodtransgzp1254456297/3388b0459031868223334457147/v.f40.mp4" type="video/mp4">
-					</video>
+					</video> -->
 					<div class="film-view" @click="handlePaused">
 						<img v-show="!isPlayed" src="../assets/img/home/play_button.png" class="play-button p-show" @click.stop="handlePlayed">
 					</div>
@@ -86,8 +86,8 @@
 			</div>
 			<div class="flex-row">
 				<div class="flex-col intro">
-					<img src="../assets/img/home/banner8.jpg" class="p-show">
-					<img src="../assets/img/home/m_banner_red8.png" class="m-show">
+					<img src="../assets/img/home/banner8.jpg">
+					<!-- <img src="../assets/img/home/m_banner8.png" class="m-show"> -->
 				</div>
 			</div>
 		</main>
