@@ -202,7 +202,7 @@
 							<div class="text-center">
 								<h4>分销运营</h4>
 								<span class="underline"></span>
-								<p>SDP+萌店等引流本体系，</p>
+								<p>SDP等引流体系，</p>
 								<p>双管齐下精准分销</p>
 							</div>
 						</div>

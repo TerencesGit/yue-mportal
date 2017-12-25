@@ -136,7 +136,7 @@
 						</div>
 					</div>
 				</div>
-				<img src="../../assets/img/about/process.jpg" class="responsive-img">
+				<img src="../../assets/img/about/process.png" class="responsive-img">
 			</div>
 		</main>
 	</section>
