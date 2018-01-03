@@ -61,10 +61,18 @@
 	      timer = setInterval(gotoTop, 1)
 	    }
 		},
-		mounted () {
+		beforeRouteUpdate (to, from, next) {
+			if(to.path !== '/detail/about' || from.path !== '/detail/about') {
+				this.getUserInfo()
+			}
+			next()
+		},
+		created () {
 			this.asideShow = false;
-			this.getUserInfo()
 			document.addEventListener('scroll', this.scroll)
+			if(this.$route.path !== '/detail/about') {
+				this.getUserInfo()
+			}
 			// if(document.getElementById('iconDiv1')) return;
 			// let _53code = document.createElement("script");
 		 //  _53code.src = "http://tb.53kf.com/code/code/9006078/1";

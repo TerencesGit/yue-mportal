@@ -88,7 +88,6 @@ export default {
 		// 获取用户信息
 		mock.onGet('/accountInter/getMyInfo.do').reply(config => {
 			let userId = Utils.getCookie('userId');
-			console.log(userId)
 			if(!userId) {
 				return new Promise((resolve, reject) => {
 					setTimeout(() => {
